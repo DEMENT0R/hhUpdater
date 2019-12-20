@@ -7,8 +7,10 @@
 // @author       DEMENT0R
 // @downloadURL  https://github.com/DEMENT0R/hhUpdater/raw/master/hhUpdater.user.js
 // @updateURL    https://github.com/DEMENT0R/hhUpdater/raw/master/hhUpdater.user.js
-// @license      GNU v3
+// @license      MIT
 // @noframes
+// @match        https://*.hh.ru/*
+// @match        https://*.headhunter.ru/*
 // @match        https://*.hh.ru/applicant/resumes/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
 // @grant        GM_addStyle
@@ -17,19 +19,16 @@
 (function() {
     'use strict';
 
-    $("button:contains('Поднять в поиске')").click();
+    var $ = window.jQuery;
 
-    setTimeout(fullCicle, 2000);
+    var widjet = "<div style='position: fixed; top: 10px; right: 10px; z-index: 9999;'>";
+    widjet += "<button class='hh-updater-click-button'>Button</button>";
+    widjet += "</div>";
 
-    function fullCicle(){
-        //start
-        // if(document.querySelector('#refresh_queue_btn')){
-        //     document.querySelector('#refresh_queue_btn').click();
-        // }
+    $("body").append(widjet);
 
-        //error code skip
-        // if(document.querySelector('.error-code')){
-        //     window.location.reload();
-        // }
-    }
+    $( ".hh-updater-click-button" ).click(function() {
+        $("button:contains('Поднять в поиске')").click();
+    });
+
 })();
