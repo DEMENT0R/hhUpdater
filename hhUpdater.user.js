@@ -3,7 +3,7 @@
 // @namespace    hhUpdater
 // @description  headhunter.ru
 // @icon         https://i.hh.ru/logos/svg/hh.ru__min_.svg
-// @version      0.1.2
+// @version      0.1.3
 // @author       DEMENT0R
 // @downloadURL  https://github.com/DEMENT0R/hhUpdater/raw/master/hhUpdater.user.js
 // @updateURL    https://github.com/DEMENT0R/hhUpdater/raw/master/hhUpdater.user.js
@@ -20,7 +20,7 @@
 
     var $ = window.jQuery;
 
-    var widjet = "<div style='position: fixed; top: 10px; right: 10px; z-index: 9999;'>";
+    var widjet = "<div class='hh-updater-click-block' style='position: fixed; top: 10px; right: 10px; z-index: 9999;'>";
     widjet += "<button class='hh-updater-click-button'>Up!</button>";
     widjet += "</div>";
 
