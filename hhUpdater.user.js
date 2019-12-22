@@ -3,7 +3,7 @@
 // @namespace    hhUpdater
 // @description  headhunter.ru
 // @icon         https://i.hh.ru/logos/svg/hh.ru__min_.svg
-// @version      0.1.3
+// @version      0.1.4
 // @author       DEMENT0R
 // @downloadURL  https://github.com/DEMENT0R/hhUpdater/raw/master/hhUpdater.user.js
 // @updateURL    https://github.com/DEMENT0R/hhUpdater/raw/master/hhUpdater.user.js
