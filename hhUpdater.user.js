@@ -20,11 +20,11 @@
 
     var $ = window.jQuery;
 
-    var widjet = "<div class='hh-updater-click-block' style='position: fixed; top: 10px; right: 10px; z-index: 9999;'>";
-    widjet += "<button class='hh-updater-click-button'>Up!</button>";
-    widjet += "</div>";
+    var button = "<div class='hh-updater-click-block supernova-navi-item'>";
+    button += "<button class='hh-updater-click-button'>Up</button>";
+    button += "</div>";
 
-    var block = $("body").append(widjet);
+    $(".supernova-navi_lvl-2").append(button);
 
     $( ".hh-updater-click-button" ).click(function() {
         $("button:contains('Поднять в поиске')").click();
