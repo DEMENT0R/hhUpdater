@@ -10,24 +10,23 @@
 // @license      MIT
 // @noframes
 // @match        https://*.hh.ru/applicant/resumes*
-// @require      http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
 // @grant        GM_addStyle
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    var $ = window.jQuery;
-
-    var button = "<div class='hh-updater-click-block supernova-navi-item'>";
-    button += "<button class='hh-updater-click-button'>Up</button>";
-    button += "</div>";
-
-    $(".supernova-navi_lvl-2").append(button);
-
-    $( ".hh-updater-click-button" ).click(function() {
-        $("button:contains('Поднять в поиске')").click();
-        $( ".hh-updater-click-block" ).remove();
-    });
-
+    const button = document.createElement('button');
+    button.innerText = 'Upp All';
+    button.id = 'upp-all-button';
+    button.addEventListener('click', () => {
+        var xpath = "//span[text()='Поднять в поиске']";
+        var matchingElement = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+        if (matchingElement) {
+            matchingElement.click();
+        } else {
+            alert('Oops!');
+        }
+    })
+    document.body.prepend(button);
 })();
